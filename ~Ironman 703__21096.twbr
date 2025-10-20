@@ -1,0 +1,2110 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='garmin_activities_from_2025-03- (Ironman)' inline='true' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ironman' name='excel-direct.0bvw1dj1em7l6m0zz2bny0m0f9qn'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Svitlana/OneDrive/Garmin/Ironman.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0bvw1dj1em7l6m0zz2bny0m0f9qn' name='garmin_activities_from_2025-03-' table='[&apos;garmin_activities_from_2025-03-$&apos;]' type='table'>
+          <columns gridOrigin='A1:L130:no:A1:L130:0' header='yes' outcome='2'>
+            <column datatype='integer' name='Activity ID' ordinal='0' />
+            <column datatype='string' name='Activity Name' ordinal='1' />
+            <column datatype='string' name='Activity Type' ordinal='2' />
+            <column datatype='datetime' name='Start Time' ordinal='3' />
+            <column datatype='string' name='Duration (minutes)' ordinal='4' />
+            <column datatype='string' name='Distance (km)' ordinal='5' />
+            <column datatype='datetime' name='Calories' ordinal='6' />
+            <column datatype='datetime' name='Average Heart Rate' ordinal='7' />
+            <column datatype='datetime' name='Max Heart Rate' ordinal='8' />
+            <column datatype='string' name='Average Speed (km/h)' ordinal='9' />
+            <column datatype='string' name='Max Speed (km/h)' ordinal='10' />
+            <column datatype='string' name='Location Name' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L130:no:A1:L130:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Activity ID]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Activity ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Activity Name]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Activity Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Activity Type]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Activity Type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Start Time]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Start Time</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration (minutes)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Duration (minutes)]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Duration (minutes)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distance (km)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Distance (km)]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Distance (km)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Calories</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Calories]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Calories</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Heart Rate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Average Heart Rate]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Average Heart Rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Heart Rate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Max Heart Rate]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Max Heart Rate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Speed (km/h)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Average Speed (km/h)]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Average Speed (km/h)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Speed (km/h)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Max Speed (km/h)]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Max Speed (km/h)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Location Name]</local-name>
+            <parent-name>[garmin_activities_from_2025-03-]</parent-name>
+            <remote-alias>Location Name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+      <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+      </column>
+      <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+      </column>
+      <column caption='Duration (m:s)' datatype='datetime' name='[Calculation_1484499062464565251]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE(1900,1,1) + &#13;&#10;(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) / 1440.0) +&#13;&#10;(INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;))) / 86400.0)' />
+      </column>
+      <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+      </column>
+      <column caption='Total time' datatype='string' name='[Calculation_1484499062471753734]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='STR(INT(SUM([Calculation_1484499062468984836]) / 3600)) + &quot;h &quot; + &#13;&#10;STR(INT((SUM([Calculation_1484499062468984836]) % 3600) / 60)) + &quot;min&quot;' />
+      </column>
+      <column caption='Week number' datatype='integer' name='[Calculation_1484499063237455879]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Week([Start Time]) - 11' />
+      </column>
+      <column caption='Start Date' datatype='date' name='[Calculation_1484499063237722120]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='Date([Start Time])' />
+      </column>
+      <column caption='Average speed - Cleaned' datatype='real' name='[Calculation_1484499063563452429]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='FLOAT(&#13;&#10;    LTRIM(&#13;&#10;        REPLACE(&#13;&#10;            REPLACE(&#13;&#10;                REPLACE(&#13;&#10;                    REPLACE([Average Speed (km/h)], &quot;:&quot;, &quot;.&quot;),&#13;&#10;                    &quot;,&quot;, &quot;.&quot;&#13;&#10;                ),&#13;&#10;                &quot;.00&quot;, &quot;&quot;&#13;&#10;            ),&#13;&#10;            &quot;.00&quot;, &quot;&quot;&#13;&#10;        ),&#13;&#10;        &quot;0&quot;&#13;&#10;    )&#13;&#10;)' />
+      </column>
+      <column caption='speed (min/km)' datatype='real' name='[Calculation_1484499063881961487]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1484499062468984836] / 60 / FLOAT(REPLACE(STR([Clean Duration (copy)_1484499063559098380]), &quot;,&quot;, &quot;.&quot;))' />
+      </column>
+      <column caption='duration (minutes)' datatype='real' name='[Calculation_1484499063883132944]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1484499062468984836]/60' />
+      </column>
+      <column caption='Running speed' datatype='string' name='[Calculation_1484499063885733905]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR(INT([Calculation_1484499063881961487])) + &quot;:&quot; + &#13;&#10;RIGHT(&quot;0&quot; + STR(INT(([Calculation_1484499063881961487] - INT([Calculation_1484499063881961487])) * 60)), 2)' />
+      </column>
+      <column caption='Clean Distance' datatype='real' name='[Clean Duration (copy)_1484499063559098380]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='FLOAT(&#13;&#10;    LTRIM(&#13;&#10;        REPLACE(&#13;&#10;            REPLACE(&#13;&#10;                REPLACE(&#13;&#10;                    REPLACE([Distance (km)], &quot;:&quot;, &quot;.&quot;),&#13;&#10;                    &quot;,&quot;, &quot;.&quot;&#13;&#10;                ),&#13;&#10;                &quot;.00&quot;, &quot;&quot;&#13;&#10;            ),&#13;&#10;            &quot;.00&quot;, &quot;&quot;&#13;&#10;        ),&#13;&#10;        &quot;0&quot;&#13;&#10;    )&#13;&#10;)' />
+      </column>
+      <column caption='Total Time (hours)' datatype='real' name='[Seconds (copy)_1484499063249215499]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_1484499062468984836]) / 3600' />
+      </column>
+      <column caption='garmin_activities_from_2025-03-' datatype='table' name='[__tableau_internal_object_id__].[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Svitlana/AppData/Local/Temp/TableauTemp/#TableauTemp_0sohypn19c42in1b6oyrf16yosag.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/25/2025 12:08:10 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Activity ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Activity ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Activity Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Activity Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Activity Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Activity Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity Type</remote-alias>
+              <ordinal>2</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start Time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Start Time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Start Time</remote-alias>
+              <ordinal>3</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Duration (minutes)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Duration (minutes)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Duration (minutes)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>127</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Distance (km)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Distance (km)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Distance (km)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>106</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Calories</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Calories]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calories</remote-alias>
+              <ordinal>6</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average Heart Rate</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Average Heart Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average Heart Rate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Heart Rate</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Max Heart Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Heart Rate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average Speed (km/h)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Average Speed (km/h)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average Speed (km/h)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>103</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Speed (km/h)</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Max Speed (km/h)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Speed (km/h)</remote-alias>
+              <ordinal>10</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location Name</remote-alias>
+              <ordinal>11</ordinal>
+              <family>garmin_activities_from_2025-03-</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Activity ID' />
+        <field-sort-custom-order field='Activity Name' />
+        <field-sort-custom-order field='Activity Type' />
+        <field-sort-custom-order field='Calculation_1484499062459154432' />
+        <field-sort-custom-order field='Start Time' />
+        <field-sort-custom-order field='Duration (minutes)' />
+        <field-sort-custom-order field='Distance (km)' />
+        <field-sort-custom-order field='Calories' />
+        <field-sort-custom-order field='Average Heart Rate' />
+        <field-sort-custom-order field='Max Heart Rate' />
+        <field-sort-custom-order field='Average Speed (km/h)' />
+        <field-sort-custom-order field='Max Speed (km/h)' />
+        <field-sort-custom-order field='Location Name' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='garmin_activities_from_2025-03-' id='garmin!activities!from!2025-03-_6B295BBF13FF4B3D954087637EAA6C40'>
+            <properties context=''>
+              <relation connection='excel-direct.0bvw1dj1em7l6m0zz2bny0m0f9qn' name='garmin_activities_from_2025-03-' table='[&apos;garmin_activities_from_2025-03-$&apos;]' type='table'>
+                <columns gridOrigin='A1:L130:no:A1:L130:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Activity ID' ordinal='0' />
+                  <column datatype='string' name='Activity Name' ordinal='1' />
+                  <column datatype='string' name='Activity Type' ordinal='2' />
+                  <column datatype='datetime' name='Start Time' ordinal='3' />
+                  <column datatype='string' name='Duration (minutes)' ordinal='4' />
+                  <column datatype='string' name='Distance (km)' ordinal='5' />
+                  <column datatype='datetime' name='Calories' ordinal='6' />
+                  <column datatype='datetime' name='Average Heart Rate' ordinal='7' />
+                  <column datatype='datetime' name='Max Heart Rate' ordinal='8' />
+                  <column datatype='string' name='Average Speed (km/h)' ordinal='9' />
+                  <column datatype='string' name='Max Speed (km/h)' ordinal='10' />
+                  <column datatype='string' name='Location Name' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Ironman 70.3 (Ironman 70.3)' inline='true' name='federated.0u27uut1mgie441gzsidd0v4fqqb' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ironman 70.3' name='excel-direct.169vzog013aw8c11sy26t03ccgau'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Svitlana/OneDrive/Garmin/Ironman 70.3.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.169vzog013aw8c11sy26t03ccgau' name='Ironman 70.3' table='[&apos;Ironman 70#3$&apos;]' type='table'>
+          <columns gridOrigin='A1:L130:no:A1:L130:0' header='yes' outcome='6'>
+            <column datatype='integer' name='Activity ID' ordinal='0' />
+            <column datatype='string' name='Activity Name' ordinal='1' />
+            <column datatype='string' name='Activity Type' ordinal='2' />
+            <column datatype='datetime' name='Start Time' ordinal='3' />
+            <column datatype='real' name='Duration (minutes)' ordinal='4' />
+            <column datatype='real' name='Distance (km)' ordinal='5' />
+            <column datatype='integer' name='Calories' ordinal='6' />
+            <column datatype='integer' name='Average Heart Rate' ordinal='7' />
+            <column datatype='integer' name='Max Heart Rate' ordinal='8' />
+            <column datatype='real' name='Average Speed (km/h)' ordinal='9' />
+            <column datatype='real' name='Max Speed (km/h)' ordinal='10' />
+            <column datatype='string' name='Location Name' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L130:no:A1:L130:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Activity ID]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Activity ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Activity Name]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Activity Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Activity Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Activity Type]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Activity Type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Start Time]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Start Time</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration (minutes)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Duration (minutes)]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Duration (minutes)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distance (km)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Distance (km)]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Distance (km)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Calories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Calories]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Calories</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Heart Rate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Average Heart Rate]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Average Heart Rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Heart Rate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Max Heart Rate]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Max Heart Rate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Average Speed (km/h)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Average Speed (km/h)]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Average Speed (km/h)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Max Speed (km/h)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Max Speed (km/h)]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Max Speed (km/h)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Location Name]</local-name>
+            <parent-name>[Ironman 70.3]</parent-name>
+            <remote-alias>Location Name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RDK_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+      <column caption='Ironman 70.3' datatype='table' name='[__tableau_internal_object_id__].[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Svitlana/AppData/Local/Temp/TableauTemp/#TableauTemp_13c5r7a0c33tmi1eqmxrn0t5sygj.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/29/2025 01:51:08 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Activity ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Activity ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Activity Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Activity Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Activity Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Activity Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Activity Type</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start Time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Start Time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Start Time</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Duration (minutes)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Duration (minutes)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Duration (minutes)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>127</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Distance (km)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Distance (km)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Distance (km)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>107</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Calories</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Calories]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Calories</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average Heart Rate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Average Heart Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average Heart Rate</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Heart Rate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Max Heart Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Heart Rate</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Average Speed (km/h)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Average Speed (km/h)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Average Speed (km/h)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Max Speed (km/h)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Max Speed (km/h)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Max Speed (km/h)</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location Name</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Ironman 70.3</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Ironman 70.3' id='Ironman 70.3_16637791F0EB45CB853D98EF48F77B1B'>
+            <properties context=''>
+              <relation connection='excel-direct.169vzog013aw8c11sy26t03ccgau' name='Ironman 70.3' table='[&apos;Ironman 70#3$&apos;]' type='table'>
+                <columns gridOrigin='A1:L130:no:A1:L130:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Activity ID' ordinal='0' />
+                  <column datatype='string' name='Activity Name' ordinal='1' />
+                  <column datatype='string' name='Activity Type' ordinal='2' />
+                  <column datatype='datetime' name='Start Time' ordinal='3' />
+                  <column datatype='real' name='Duration (minutes)' ordinal='4' />
+                  <column datatype='real' name='Distance (km)' ordinal='5' />
+                  <column datatype='integer' name='Calories' ordinal='6' />
+                  <column datatype='integer' name='Average Heart Rate' ordinal='7' />
+                  <column datatype='integer' name='Max Heart Rate' ordinal='8' />
+                  <column datatype='real' name='Average Speed (km/h)' ordinal='9' />
+                  <column datatype='real' name='Max Speed (km/h)' ordinal='10' />
+                  <column datatype='string' name='Location Name' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Bike'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Activity ID]' derivation='CountD' name='[ctd:Activity ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1484499062459154432]' derivation='None' name='[none:Calculation_1484499062459154432:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1484499062459154432:nk]' member='&quot;Cycling&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='61' />
+            <format attr='text-align' value='center' />
+            <format attr='width' value='375' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='28' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='28' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[ctd:Activity ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{34157F94-5F1A-43B8-B116-EF39CE7DF138}' />
+    </worksheet>
+    <worksheet name='Run'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Activity ID]' derivation='CountD' name='[ctd:Activity ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1484499062459154432]' derivation='None' name='[none:Calculation_1484499062459154432:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1484499062459154432:nk]' member='&quot;Running&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='61' />
+            <format attr='text-align' value='center' />
+            <format attr='width' value='375' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='28' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='28' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[ctd:Activity ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4061489C-E3BC-4D53-B973-D8102B3441AB}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Activity Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Average Speed (km/h)]' role='dimension' type='nominal' />
+            <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+            </column>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column caption='Average speed - Cleaned' datatype='real' name='[Calculation_1484499063563452429]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='FLOAT(&#13;&#10;    LTRIM(&#13;&#10;        REPLACE(&#13;&#10;            REPLACE(&#13;&#10;                REPLACE(&#13;&#10;                    REPLACE([Average Speed (km/h)], &quot;:&quot;, &quot;.&quot;),&#13;&#10;                    &quot;,&quot;, &quot;.&quot;&#13;&#10;                ),&#13;&#10;                &quot;.00&quot;, &quot;&quot;&#13;&#10;            ),&#13;&#10;            &quot;.00&quot;, &quot;&quot;&#13;&#10;        ),&#13;&#10;        &quot;0&quot;&#13;&#10;    )&#13;&#10;)' />
+            </column>
+            <column caption='speed (min/km)' datatype='real' name='[Calculation_1484499063881961487]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1484499062468984836] / 60 / FLOAT(REPLACE(STR([Clean Duration (copy)_1484499063559098380]), &quot;,&quot;, &quot;.&quot;))' />
+            </column>
+            <column caption='duration (minutes)' datatype='real' name='[Calculation_1484499063883132944]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1484499062468984836]/60' />
+            </column>
+            <column caption='Running speed' datatype='string' name='[Calculation_1484499063885733905]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR(INT([Calculation_1484499063881961487])) + &quot;:&quot; + &#13;&#10;RIGHT(&quot;0&quot; + STR(INT(([Calculation_1484499063881961487] - INT([Calculation_1484499063881961487])) * 60)), 2)' />
+            </column>
+            <column caption='Clean Distance' datatype='real' name='[Clean Duration (copy)_1484499063559098380]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='FLOAT(&#13;&#10;    LTRIM(&#13;&#10;        REPLACE(&#13;&#10;            REPLACE(&#13;&#10;                REPLACE(&#13;&#10;                    REPLACE([Distance (km)], &quot;:&quot;, &quot;.&quot;),&#13;&#10;                    &quot;,&quot;, &quot;.&quot;&#13;&#10;                ),&#13;&#10;                &quot;.00&quot;, &quot;&quot;&#13;&#10;            ),&#13;&#10;            &quot;.00&quot;, &quot;&quot;&#13;&#10;        ),&#13;&#10;        &quot;0&quot;&#13;&#10;    )&#13;&#10;)' />
+            </column>
+            <column datatype='string' name='[Distance (km)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column-instance column='[Activity ID]' derivation='None' name='[none:Activity ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Activity Name]' derivation='None' name='[none:Activity Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1484499062459154432]' derivation='None' name='[none:Calculation_1484499062459154432:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1484499063885733905]' derivation='None' name='[none:Calculation_1484499063885733905:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Clean Duration (copy)_1484499063559098380]' derivation='None' name='[none:Clean Duration (copy)_1484499063559098380:nk]' pivot='key' type='ordinal' />
+            <column-instance column='[Distance (km)]' derivation='None' name='[none:Distance (km):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Start Time]' derivation='None' name='[none:Start Time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1484499062468984836]' derivation='Sum' name='[sum:Calculation_1484499062468984836:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1484499063563452429]' derivation='Sum' name='[sum:Calculation_1484499063563452429:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1484499063881961487]' derivation='Sum' name='[sum:Calculation_1484499063881961487:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1484499063883132944]' derivation='Sum' name='[sum:Calculation_1484499063883132944:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1484499062459154432:nk]' member='&quot;Running&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Distance (km):nk]' value='164' />
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063563452429:ok]' value='180' />
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Clean Duration (copy)_1484499063559098380:nk]' value='164' />
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063881961487:ok]' value='128' />
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063883132944:ok]' value='192' />
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Activity Name:nk]' value='248' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063883132944:ok]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063881961487:ok]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Activity Name:nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Activity ID:ok] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Start Time:ok] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Distance (km):nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Clean Duration (copy)_1484499063559098380:nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063883132944:ok] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499062468984836:ok] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063881961487:ok] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499063563452429:ok] / [federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499063885733905:nk])))))))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{D362ABDA-3BEA-4013-9A53-47F044C00056}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ironman 70.3 (Ironman 70.3)' name='federated.0u27uut1mgie441gzsidd0v4fqqb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0u27uut1mgie441gzsidd0v4fqqb'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Average Speed (km/h)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Distance (km)]' role='measure' type='quantitative' />
+            <column-instance column='[Activity ID]' derivation='None' name='[none:Activity ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Activity Type]' derivation='None' name='[none:Activity Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Average Speed (km/h)]' derivation='Sum' name='[sum:Average Speed (km/h):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Distance (km)]' derivation='Sum' name='[sum:Distance (km):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0u27uut1mgie441gzsidd0v4fqqb].[sum:Distance (km):ok]' value='128' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0u27uut1mgie441gzsidd0v4fqqb].[none:Activity Type:nk] / ([federated.0u27uut1mgie441gzsidd0v4fqqb].[none:Activity ID:ok] / ([federated.0u27uut1mgie441gzsidd0v4fqqb].[sum:Distance (km):ok] / [federated.0u27uut1mgie441gzsidd0v4fqqb].[sum:Average Speed (km/h):ok])))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FA2043AD-407E-4819-9BB7-DE4959578568}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column caption='Total time' datatype='string' name='[Calculation_1484499062471753734]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='STR(INT(SUM([Calculation_1484499062468984836]) / 3600)) + &quot;h &quot; + &#13;&#10;STR(INT((SUM([Calculation_1484499062468984836]) % 3600) / 60)) + &quot;min&quot;' />
+            </column>
+            <column caption='Start Date' datatype='date' name='[Calculation_1484499063237722120]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='Date([Start Time])' />
+            </column>
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1484499063237722120]' derivation='Week-Trunc' name='[twk:Calculation_1484499063237722120:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1484499062471753734]' derivation='User' name='[usr:Calculation_1484499062471753734:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Calculation_1484499062471753734:nk]' value='128' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok]' value='*ww' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok] / [federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Calculation_1484499062471753734:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{C61B271E-BFFD-4B06-89C8-A8079CE83CD7}' />
+    </worksheet>
+    <worksheet name='Swim'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Activity ID]' derivation='CountD' name='[ctd:Activity ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1484499062459154432]' derivation='None' name='[none:Calculation_1484499062459154432:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1484499062459154432:nk]' member='&quot;Swimming&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='61' />
+            <format attr='text-align' value='center' />
+            <format attr='width' value='375' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='28' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='28' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[ctd:Activity ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{693E891C-98A8-42CD-88B3-8D5E75CC1761}' />
+    </worksheet>
+    <worksheet name='Testing things'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='string' name='[Activity Type]' role='dimension' type='nominal' />
+            <column caption='Activity Type - Cleaned' datatype='string' name='[Calculation_1484499062459154432]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS(LOWER([Activity Type]), &quot;swimming&quot;) THEN &quot;Swimming&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cardio&quot;) OR CONTAINS(LOWER([Activity Type]), &quot;strength&quot;) THEN &quot;Strength Training&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;cycling&quot;) THEN &quot;Cycling&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;running&quot;) THEN &quot;Running&quot;&#13;&#10;ELSEIF CONTAINS(LOWER([Activity Type]), &quot;multi&quot;) THEN &quot;Triathlon&quot;&#13;&#10;ELSE [Activity Type]&#13;&#10;END' />
+            </column>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Duration (m:s)' datatype='datetime' name='[Calculation_1484499062464565251]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE(1900,1,1) + &#13;&#10;(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) / 1440.0) +&#13;&#10;(INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;))) / 86400.0)' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column datatype='string' name='[Distance (km)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1484499062459154432]' derivation='None' name='[none:Calculation_1484499062459154432:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1484499062463893506]' derivation='None' name='[none:Calculation_1484499062463893506:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1484499062464565251]' derivation='None' name='[none:Calculation_1484499062464565251:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Distance (km)]' derivation='None' name='[none:Distance (km):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Duration (minutes)]' derivation='None' name='[none:Duration (minutes):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1484499062468984836]' derivation='Sum' name='[sum:Calculation_1484499062468984836:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='149' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Distance (km):nk]' value='156' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062464565251:ok]' value='*Hh:nn:ss' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[sum:Calculation_1484499062468984836:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062459154432:nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Duration (minutes):nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062463893506:nk] / ([federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Calculation_1484499062464565251:ok] / [federated.0hi59gw01f8pj11bx9qlz1idij8a].[none:Distance (km):nk]))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{82CF56D1-7B80-4305-870A-591E4A42CFB7}' />
+    </worksheet>
+    <worksheet name='Time per week'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column caption='Start Date' datatype='date' name='[Calculation_1484499063237722120]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='Date([Start Time])' />
+            </column>
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column caption='Total Time (hours)' datatype='real' name='[Seconds (copy)_1484499063249215499]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_1484499062468984836]) / 3600' />
+            </column>
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1484499063237722120]' derivation='Week-Trunc' name='[twk:Calculation_1484499063237722120:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Seconds (copy)_1484499063249215499]' derivation='User' name='[usr:Seconds (copy)_1484499063249215499:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok]' value='*ww' />
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Seconds (copy)_1484499063249215499:qk]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Seconds (copy)_1484499063249215499:qk]</rows>
+        <cols>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok]</cols>
+      </table>
+      <simple-id uuid='{2A91F21D-C770-4925-A3AA-273C553D5994}' />
+    </worksheet>
+    <worksheet name='Time per week (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column caption='Start Date' datatype='date' name='[Calculation_1484499063237722120]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='Date([Start Time])' />
+            </column>
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column caption='Total Time (hours)' datatype='real' name='[Seconds (copy)_1484499063249215499]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_1484499062468984836]) / 3600' />
+            </column>
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1484499063237722120]' derivation='Week-Trunc' name='[twk:Calculation_1484499063237722120:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Seconds (copy)_1484499063249215499]' derivation='User' name='[usr:Seconds (copy)_1484499063249215499:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok]' value='*ww' />
+            <format attr='text-format' field='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Seconds (copy)_1484499063249215499:qk]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Seconds (copy)_1484499063249215499:qk]</rows>
+        <cols>[federated.0hi59gw01f8pj11bx9qlz1idij8a].[twk:Calculation_1484499063237722120:ok]</cols>
+      </table>
+      <simple-id uuid='{9F6C0FD1-0360-4CD5-9D3F-2DA19469C218}' />
+    </worksheet>
+    <worksheet name='Total time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column caption='Clean Duration' datatype='string' name='[Calculation_1484499062463893506]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Duration (minutes)], &quot;:&quot;) AND LEN([Duration (minutes)]) - LEN(REPLACE([Duration (minutes)], &quot;:&quot;, &quot;&quot;)) = 2 THEN&#13;&#10;    // Handle format like &quot;44:51:00&quot; - remove the trailing :00&#13;&#10;    LEFT([Duration (minutes)], FIND([Duration (minutes)], &quot;:&quot;, FIND([Duration (minutes)], &quot;:&quot;) + 1) - 1)&#13;&#10;ELSEIF NOT CONTAINS([Duration (minutes)], &quot;:&quot;) AND CONTAINS([Duration (minutes)], &quot;.&quot;) THEN&#13;&#10;    // Handle decimal format like &quot;67.50&quot; - convert to minutes:seconds&#13;&#10;    STR(INT(FLOAT([Duration (minutes)]))) + &quot;:&quot; + &#13;&#10;    IF LEN(STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))) = 1 THEN&#13;&#10;        &quot;0&quot; + STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    ELSE&#13;&#10;        STR(INT((FLOAT([Duration (minutes)]) - INT(FLOAT([Duration (minutes)]))) * 60))&#13;&#10;    END&#13;&#10;ELSE&#13;&#10;    // Handle format like &quot;67:50&quot; - keep as is&#13;&#10;    [Duration (minutes)]&#13;&#10;END' />
+            </column>
+            <column caption='Seconds' datatype='integer' name='[Calculation_1484499062468984836]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(INT(LEFT([Calculation_1484499062463893506], FIND([Calculation_1484499062463893506], &quot;:&quot;) - 1)) * 60) + &#13;&#10;INT(RIGHT([Calculation_1484499062463893506], LEN([Calculation_1484499062463893506]) - FIND([Calculation_1484499062463893506], &quot;:&quot;)))' />
+            </column>
+            <column caption='Total time' datatype='string' name='[Calculation_1484499062471753734]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='STR(INT(SUM([Calculation_1484499062468984836]) / 3600)) + &quot;h &quot; + &#13;&#10;STR(INT((SUM([Calculation_1484499062468984836]) % 3600) / 60)) + &quot;min&quot;' />
+            </column>
+            <column datatype='string' name='[Duration (minutes)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1484499062471753734]' derivation='User' name='[usr:Calculation_1484499062471753734:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='761' />
+            <format attr='height' value='58' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='28' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='28' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[usr:Calculation_1484499062471753734:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0BA06EB8-BFA2-4D72-9413-0B2A85DE6907}' />
+    </worksheet>
+    <worksheet name='Total workouts'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='garmin_activities_from_2025-03- (Ironman)' name='federated.0hi59gw01f8pj11bx9qlz1idij8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hi59gw01f8pj11bx9qlz1idij8a'>
+            <column datatype='integer' name='[Activity ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Activity ID]' derivation='CountD' name='[ctd:Activity ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='61' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='28' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='28' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0hi59gw01f8pj11bx9qlz1idij8a].[ctd:Activity ID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E159FC5B-364F-403E-AF07-16B2B077AF6D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='88720' id='3' param='vert' type-v2='layout-flow' w='99534' x='233' y='10851'>
+            <zone fixed-size='170' h='9120' id='6' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='99534' x='233' y='10851'>
+              <zone h='9120' id='9' name='Total time' w='19924' x='233' y='10837'>
+                <layout-cache fixed-size-h='138' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9120' id='7' name='Total workouts' w='19924' x='20157' y='10837'>
+                <layout-cache fixed-size-h='141' type-h='fixed' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9120' id='13' name='Swim' w='19896' x='40081' y='10837'>
+                <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9120' id='14' name='Bike' w='19895' x='59977' y='10837'>
+                <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9120' id='12' name='Run' w='19895' x='79872' y='10837'>
+                <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='79600' id='16' param='horz' type-v2='layout-flow' w='99534' x='233' y='19971'>
+              <zone h='79600' id='17' name='Time per week' w='99534' x='233' y='19971'>
+                <layout-cache cell-count-w='16' minheight='195' non-cell-size-w='73' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='10422' id='15' is-centered='0' param='C:/Users/Svitlana/OneDrive/Garmin/Official result.png' type-v2='bitmap' w='99534' x='233' y='429'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99142' id='18' param='vert' type-v2='layout-flow' w='99534' x='233' y='429'>
+                <zone fixed-size='76' h='10422' id='15' is-centered='0' is-fixed='true' param='C:/Users/Svitlana/OneDrive/Garmin/Official result.png' type-v2='bitmap' w='99534' x='233' y='429'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='9120' id='9' is-fixed='true' name='Total time' w='19924' x='233' y='10837'>
+                  <layout-cache fixed-size-h='138' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='9120' id='7' is-fixed='true' name='Total workouts' w='19924' x='20157' y='10837'>
+                  <layout-cache fixed-size-h='141' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='9120' id='13' is-fixed='true' name='Swim' w='19896' x='40081' y='10837'>
+                  <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='9120' id='14' is-fixed='true' name='Bike' w='19895' x='59977' y='10837'>
+                  <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='65' h='9120' id='12' is-fixed='true' name='Run' w='19895' x='79872' y='10837'>
+                  <layout-cache fixed-size-h='141' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='79600' id='17' is-fixed='true' name='Time per week' w='99534' x='233' y='19971'>
+                  <layout-cache cell-count-w='16' minheight='195' non-cell-size-w='73' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{77D172A9-8BAE-4CB3-BD32-217B2069174C}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='62'>
+    <window class='dashboard' maximized='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Bike'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Run'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Swim'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Time per week'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total time'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Total workouts'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='17' />
+      <simple-id uuid='{228AC502-1F64-401E-A9F4-F6A747F6E442}' />
+    </window>
+    <window class='worksheet' name='Total workouts'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5179B329-54D3-43FA-BBCD-13A03C1157F3}' />
+    </window>
+    <window class='worksheet' name='Run'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{38A40B0C-5F6C-43B5-BE08-7747CD9D6ABD}' />
+    </window>
+    <window class='worksheet' name='Swim'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1949E800-90C7-4FB4-BC97-218BAE5ED015}' />
+    </window>
+    <window class='worksheet' name='Bike'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{401235C0-1EE4-47E5-B3C7-C38A8FB215FC}' />
+    </window>
+    <window class='worksheet' name='Testing things'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2CA7CC2A-B718-40CC-9EAC-98CF186C2E2A}' />
+    </window>
+    <window class='worksheet' name='Total time'>
+      <cards>
+        <edge name='left'>
+          <strip size='192'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='36'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{336E29B5-B966-45A5-AD51-D30A7F9B515B}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E3F97629-A7A8-4406-B83C-ECF67A577FE4}' />
+    </window>
+    <window class='worksheet' name='Time per week'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{921A2997-E65E-46FC-99F8-0563F64F0CD1}' />
+    </window>
+    <window class='worksheet' name='Time per week (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='37'>
+            <card type='columns' />
+          </strip>
+          <strip size='37'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C4586422-19F0-4A5C-A502-58D8CF1E478C}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BD1EE10E-995D-4543-960E-40A7D77CF28B}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F4B52097-E4B5-4BF6-9927-A16BE498E57E}' />
+    </window>
+  </windows>
+</workbook>
