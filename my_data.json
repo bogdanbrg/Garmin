@@ -1,0 +1,14 @@
+{
+    "name": "Svitlana",
+    "age": 25,
+    "hobbies": [
+        "running",
+        "coding",
+        "reading"
+    ],
+    "is_student": false,
+    "address": {
+        "city": "Kyiv",
+        "country": "Ukraine"
+    }
+}
