@@ -1,0 +1,48 @@
+# Database files (local only)
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+dbt-env/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# dbt
+logs/
+target/
+dbt_packages/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+~*
+*.tmp
+
+# Images (optional - uncomment if you don't want images in Git)
+# *.png
+# *.jpg
+# *.jpeg

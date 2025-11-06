@@ -84,7 +84,7 @@ def extract_and_load_gear():
         # Load to Database
         # ========================================
         print("  → Loading to database...")
-        db_path = 'garmin.db'
+        db_path = 'data/garmin.db'
         conn = sqlite3.connect(db_path)
         
         df_gear.to_sql('bronze_gear_list', conn, if_exists='replace', index=False)
