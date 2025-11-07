@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: main
+    description: Raw Garmin data extracted from API
+    tables:
+      - name: bronze_gear_list
+        description: Raw gear list from Garmin Connect
+      - name: bronze_gear_stats
+        description: Raw gear usage statistics

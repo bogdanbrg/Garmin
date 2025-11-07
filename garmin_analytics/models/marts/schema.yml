@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: gear_overview
+    description: |
+      Complete overview of all gear with usage statistics and lifecycle metrics.
+      This is the primary analytics table combining gear details with cumulative usage data.
+      Includes derived metrics like percentage of maximum distance used and remaining gear life.
+    columns:
+      - name: gear_id
+        description: Unique identifier for each piece of gear (UUID from Garmin)
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: gear_type
+        description: Type of gear (e.g., shoes, bike, etc.)
+        data_tests:
+          - not_null
+      
+      - name: gear_name
+        description: Custom name or model description for the gear
+      
+      - name: status
+        description: Current status of the gear (active or retired)
+        data_tests:
+          - accepted_values:
+              values: ['active', 'retired']
+      
+      - name: start_date
+        description: Date when the gear was first used (YYYY-MM-DD format)
+        data_tests:
+          - not_null
+      
+      - name: end_date
+        description: Date when the gear was retired (NULL if still active)
+      
+      - name: stats_last_updated
+        description: Last date when usage statistics were updated from Garmin
+      
+      - name: total_distance_km
+        description: Cumulative distance traveled with this gear in kilometers
+        data_tests:
+          - not_null
+      
+      - name: total_activities
+        description: Total number of activities recorded with this gear
+        data_tests:
+          - not_null
+      
+      - name: max_distance_km
+        description: Maximum recommended distance in kilometers before gear retirement (NULL for gear without distance limits)
+      
+      - name: pct_of_max_distance_used
+        description: Percentage of maximum recommended distance already used (NULL if no max distance defined)
+      
+      - name: remaining_distance_km
+        description: Estimated kilometers remaining before retirement recommendation (NULL if no max distance defined)
+      
+      - name: days_since_first_use
+        description: Number of days since the gear was first used
+        data_tests:
+          - not_null
+      
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record

@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_gear_list
+    description: Cleaned and standardized gear list from Garmin Connect API. One row per piece of gear (shoes, bikes, etc).
+    columns:
+      - name: gear_id
+        description: Unique identifier for each piece of gear (UUID from Garmin)
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: gear_type
+        description: Type of gear (e.g., shoes, bike, etc.)
+        data_tests:
+          - not_null
+      
+      - name: gear_name
+        description: Custom model name or description for the gear
+      
+      - name: start_date
+        description: Date when the gear was first used (YYYY-MM-DD format)
+        data_tests:
+          - not_null
+      
+      - name: end_date
+        description: Date when the gear was retired (NULL if still active)
+      
+      - name: max_distance_km
+        description: Maximum recommended distance in kilometers before retirement
+      
+      - name: status
+        description: Current status of the gear (active or retired)
+        data_tests:
+          - accepted_values:
+              values: ['active', 'retired']
+      
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
+
+  - name: stg_gear_stats
+    description: Cleaned and standardized gear usage statistics from Garmin Connect API. Contains cumulative metrics for each piece of gear.
+    columns:
+      - name: gear_id
+        description: Unique identifier for each piece of gear (UUID from Garmin) - joins to stg_gear_list
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_gear_list')
+              field: gear_id
+      
+      - name: updated_at
+        description: Last date when gear statistics were updated (YYYY-MM-DD format)
+        data_tests:
+          - not_null
+      
+      - name: total_distance_km
+        description: Cumulative distance traveled with this gear in kilometers
+        data_tests:
+          - not_null
+      
+      - name: total_activities
+        description: Total number of activities recorded with this gear
+        data_tests:
+          - not_null
+      
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
