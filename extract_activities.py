@@ -54,7 +54,7 @@ def extract_and_load_activities():
         api = init_api()
 
         # ========================================
-        # TABLE 1: Activities List
+        # Extract Activities
         # ========================================
         print("  → Extracting activities for 2025...")
 
@@ -98,44 +98,18 @@ def extract_and_load_activities():
             return False
 
         # ========================================
-        # TABLE 2: Activity Weather (Optional)
-        # ========================================
-        print("  → Extracting weather data for activities...")
-        weather_data = []
-
-        # Only fetch weather for a subset to avoid rate limits
-        # You can increase this number or remove the limit
-        max_weather_fetch = min(50, len(df_activities))  # Fetch weather for first 50 activities
-
-        for i in range(max_weather_fetch):
-            activity_id = df_activities.iloc[i]['activityId']
-            activity_name = df_activities.iloc[i].get('activityName', 'Unnamed')
-
-            try:
-                weather = api.get_activity_weather(activity_id)
-                weather['activityId'] = activity_id
-                weather_data.append(weather)
-
-                if (i + 1) % 10 == 0:
-                    print(f"    Progress: {i + 1}/{max_weather_fetch} weather records fetched")
-
-                time.sleep(0.5)  # Be nice to Garmin's servers
-
-            except Exception as e:
-                # Some activities don't have weather data, that's OK
-                pass
-
-        if weather_data:
-            df_weather = pd.DataFrame(weather_data)
-            print(f"  ✅ Found weather data for {len(df_weather)} activities")
-        else:
-            df_weather = pd.DataFrame()
-            print(f"  ⚠️  No weather data available")
-
-        # ========================================
         # Load to Database
         # ========================================
         print("  → Loading to database...")
+        
+        # Convert dict/list columns to JSON strings (SQLite can't handle dicts)
+        import json
+        for col in df_activities.columns:
+            if df_activities[col].apply(lambda x: isinstance(x, (dict, list))).any():
+                df_activities[col] = df_activities[col].apply(
+                    lambda x: json.dumps(x) if isinstance(x, (dict, list)) else x
+                )
+        
         db_path = 'data/garmin.db'
         conn = sqlite3.connect(db_path)
 
@@ -143,13 +117,8 @@ def extract_and_load_activities():
         df_activities.to_sql('bronze_activities', conn, if_exists='replace', index=False)
         print(f"    ✅ bronze_activities: {len(df_activities)} records")
 
-        # Load weather if available
-        if len(df_weather) > 0:
-            df_weather.to_sql('bronze_activity_weather', conn, if_exists='replace', index=False)
-            print(f"    ✅ bronze_activity_weather: {len(df_weather)} records")
-
         conn.close()
-        print(f"  ✅ All tables loaded to {db_path}")
+        print(f"  ✅ Data loaded to {db_path}")
 
         # ========================================
         # Summary
@@ -158,7 +127,6 @@ def extract_and_load_activities():
         print("📊 EXTRACTION SUMMARY")
         print("="*60)
         print(f"  Total activities (2025): {len(df_activities)}")
-        print(f"  Weather records: {len(df_weather) if len(df_weather) > 0 else 0}")
         print(f"  Date range: {df_activities['startTimeLocal'].min()} to {df_activities['startTimeLocal'].max()}")
 
         if 'distance' in df_activities.columns:
