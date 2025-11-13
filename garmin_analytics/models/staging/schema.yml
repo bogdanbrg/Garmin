@@ -67,3 +67,143 @@ models:
       
       - name: dbt_loaded_at
         description: Timestamp when dbt processed this record
+
+  - name: stg_activities
+    description: |
+      Cleaned and standardized activities from Garmin Connect.
+      Includes running, cycling, strength training, and other activity types with metrics like distance, duration, heart rate, and training effects.
+      All timestamps are in local Copenhagen time.
+    columns:
+      - name: activity_id
+        description: Unique identifier for each activity
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: owner_id
+        description: User ID of the activity owner
+        data_tests:
+          - not_null
+      
+      - name: activity_name
+        description: Name/title of the activity
+      
+      - name: activity_type_key
+        description: Type of activity extracted from JSON (e.g., running, cycling, strength_training)
+        data_tests:
+          - not_null
+      
+      - name: location_name
+        description: Location where the activity took place
+      
+      - name: start_date
+        description: Date when the activity started (local time, YYYY-MM-DD format)
+        data_tests:
+          - not_null
+      
+      - name: start_time_local
+        description: Time when the activity started (local Copenhagen time, HH:MM:SS format)
+      
+      - name: end_time_local
+        description: Time when the activity ended (local Copenhagen time, calculated from start_time + duration)
+      
+      - name: distance_km
+        description: Total distance covered in kilometers
+      
+      - name: duration_minutes
+        description: Total duration of the activity in minutes
+        data_tests:
+          - not_null
+      
+      - name: elapsed_duration_minutes
+        description: Elapsed time including pauses in minutes
+      
+      - name: moving_duration_minutes
+        description: Active moving time excluding pauses in minutes
+      
+      - name: elevation_gain_m
+        description: Total elevation gained in meters
+      
+      - name: elevation_loss_m
+        description: Total elevation lost in meters
+      
+      - name: min_elevation_m
+        description: Minimum elevation reached in meters
+      
+      - name: max_elevation_m
+        description: Maximum elevation reached in meters
+      
+      - name: avg_speed_kmh
+        description: Average speed in kilometers per hour
+      
+      - name: max_speed_kmh
+        description: Maximum speed in kilometers per hour
+      
+      - name: avg_heart_rate
+        description: Average heart rate in beats per minute
+      
+      - name: max_heart_rate
+        description: Maximum heart rate in beats per minute
+      
+      - name: hr_zone_1_seconds
+        description: Time spent in heart rate zone 1 (warm-up) in seconds
+      
+      - name: hr_zone_2_seconds
+        description: Time spent in heart rate zone 2 (easy) in seconds
+      
+      - name: hr_zone_3_seconds
+        description: Time spent in heart rate zone 3 (aerobic) in seconds
+      
+      - name: hr_zone_4_seconds
+        description: Time spent in heart rate zone 4 (threshold) in seconds
+      
+      - name: hr_zone_5_seconds
+        description: Time spent in heart rate zone 5 (maximum) in seconds
+      
+      - name: avg_cadence_spm
+        description: Average running cadence in steps per minute
+      
+      - name: max_cadence_spm
+        description: Maximum running cadence in steps per minute
+      
+      - name: avg_stride_length_m
+        description: Average stride length in meters
+      
+      - name: total_steps
+        description: Total number of steps taken
+      
+      - name: aerobic_training_effect
+        description: Aerobic training effect score (0-5 scale)
+      
+      - name: anaerobic_training_effect
+        description: Anaerobic training effect score (0-5 scale)
+      
+      - name: vo2_max
+        description: VO2 max estimate from the activity
+      
+      - name: total_calories
+        description: Total calories burned during activity
+      
+      - name: bmr_calories
+        description: Basal metabolic rate calories (resting calories)
+      
+      - name: start_latitude
+        description: Starting latitude coordinate
+      
+      - name: start_longitude
+        description: Starting longitude coordinate
+      
+      - name: owner_name
+        description: Full name of the activity owner
+      
+      - name: owner_profile_image_url
+        description: URL to the owner's profile image
+      
+      - name: sport_type_id
+        description: Numeric ID for the sport type
+      
+      - name: device_id
+        description: ID of the device used to record the activity
+      
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record

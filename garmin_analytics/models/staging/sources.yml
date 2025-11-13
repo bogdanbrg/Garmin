@@ -8,3 +8,5 @@ sources:
         description: Raw gear list from Garmin Connect
       - name: bronze_gear_stats
         description: Raw gear usage statistics
+      - name: bronze_activities
+        description: Raw activity data from Garmin Connect
