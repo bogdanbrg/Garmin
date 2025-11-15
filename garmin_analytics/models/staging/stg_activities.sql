@@ -33,6 +33,34 @@ SELECT
     -- Speed (convert from m/s to km/h)
     ROUND(averageSpeed * 3.6, 2) as avg_speed_kmh,
     ROUND(maxSpeed * 3.6, 2) as max_speed_kmh,
+
+    -- Pace (min/km - useful for running)
+    CASE
+        WHEN averageSpeed > 0 THEN ROUND(1000.0 / (averageSpeed * 60), 2)
+        ELSE NULL
+    END as avg_pace_min_per_km,
+    CASE
+        WHEN maxSpeed > 0 THEN ROUND(1000.0 / (maxSpeed * 60), 2)
+        ELSE NULL
+    END as max_pace_min_per_km,
+
+    -- Pace formatted as MM:SS (for display)
+    CASE
+        WHEN averageSpeed > 0 THEN
+            PRINTF('%d:%02d',
+                CAST(1000.0 / (averageSpeed * 60) AS INTEGER),
+                CAST((1000.0 / (averageSpeed * 60) - CAST(1000.0 / (averageSpeed * 60) AS INTEGER)) * 60 AS INTEGER)
+            )
+        ELSE NULL
+    END as avg_pace_formatted,
+    CASE
+        WHEN maxSpeed > 0 THEN
+            PRINTF('%d:%02d',
+                CAST(1000.0 / (maxSpeed * 60) AS INTEGER),
+                CAST((1000.0 / (maxSpeed * 60) - CAST(1000.0 / (maxSpeed * 60) AS INTEGER)) * 60 AS INTEGER)
+            )
+        ELSE NULL
+    END as max_pace_formatted,
     
     -- Heart Rate
     averageHR as avg_heart_rate,

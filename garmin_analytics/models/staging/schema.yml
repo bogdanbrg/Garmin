@@ -207,3 +207,36 @@ models:
       
       - name: dbt_loaded_at
         description: Timestamp when dbt processed this record
+
+  - name: stg_activity_gear
+    description: |
+      Activity-gear relationships showing which gear (shoes, bikes, etc.) was used for each activity.
+      This is the linking table between activities and gear.
+    columns:
+      - name: activity_id
+        description: ID of the activity
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_activities')
+              field: activity_id
+      
+      - name: gear_id
+        description: UUID of the gear used - links to stg_gear_list
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_gear_list')
+              field: gear_id
+      
+      - name: gear_pk
+        description: Garmin's internal gear primary key
+      
+      - name: user_profile_pk
+        description: User profile primary key
+      
+      - name: gear_name
+        description: Custom name or model of the gear
+      
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
