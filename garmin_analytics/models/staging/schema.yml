@@ -237,6 +237,57 @@ models:
       
       - name: gear_name
         description: Custom name or model of the gear
-      
+
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
+
+  - name: stg_activity_weather
+    description: |
+      Weather conditions for outdoor activities from Garmin Connect.
+      Includes temperature, humidity, and wind data captured at activity start time/location.
+      Only available for outdoor activities with GPS. Indoor activities will not have weather data.
+    columns:
+      - name: activity_id
+        description: ID of the activity - links to stg_activities
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_activities')
+              field: activity_id
+
+      - name: temperature_c
+        description: Actual temperature in Celsius at activity start
+        data_tests:
+          - not_null
+
+      - name: feels_like_c
+        description: Apparent/feels-like temperature in Celsius accounting for humidity and wind
+        data_tests:
+          - not_null
+
+      - name: dew_point_c
+        description: Dew point temperature in Celsius
+
+      - name: humidity_percent
+        description: Relative humidity percentage (0-100)
+
+      - name: wind_speed_kmh
+        description: Average wind speed in kilometers per hour
+
+      - name: wind_direction
+        description: Wind direction as compass point (N, NE, E, SE, S, SW, W, NW, etc.)
+
+      - name: weather_condition
+        description: Weather condition description (e.g., clear, cloudy, rainy)
+
+      - name: weather_latitude
+        description: Latitude where weather was measured
+
+      - name: weather_longitude
+        description: Longitude where weather was measured
+
+      - name: weather_timestamp
+        description: Timestamp when weather was captured (YYYY-MM-DD HH:MM:SS format)
+
       - name: dbt_loaded_at
         description: Timestamp when dbt processed this record

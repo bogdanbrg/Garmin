@@ -12,3 +12,5 @@ sources:
         description: Raw activity data from Garmin Connect
       - name: bronze_activity_gear
         description: Raw activity-gear relationships from Garmin Connect
+      - name: bronze_activity_weather
+        description: Raw activity weather data from Garmin Connect
