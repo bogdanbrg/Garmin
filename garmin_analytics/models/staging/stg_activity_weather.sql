@@ -10,7 +10,7 @@ SELECT
     ROUND((dewPoint - 32) * 5.0 / 9.0, 1) as dew_point_c,
 
     -- Humidity
-    relativeHumidity as humidity_percent,
+    ROUND(relativeHumidity, 0) as humidity_percent,
 
     -- Wind
     ROUND(windSpeed * 1.60934, 1) as wind_speed_kmh,  -- Convert mph to km/h
@@ -20,8 +20,8 @@ SELECT
     json_extract(weatherTypeDTO, '$.desc') as weather_condition,
 
     -- Location (where weather was measured)
-    latitude as weather_latitude,
-    longitude as weather_longitude,
+    ROUND(latitude, 6) as weather_latitude,
+    ROUND(longitude, 6) as weather_longitude,
 
     -- Timestamp (convert from ISO format to SQLite datetime)
     DATETIME(SUBSTR(issueDate, 1, 19)) as weather_timestamp,

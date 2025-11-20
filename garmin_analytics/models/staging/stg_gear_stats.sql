@@ -9,8 +9,8 @@ SELECT
     
     -- Convert distance from meters to kilometers
     ROUND(totalDistance / 1000, 2) as total_distance_km,
-    
-    totalActivities as total_activities,
+
+    ROUND(totalActivities, 0) as total_activities,
     
     -- Metadata
     CURRENT_TIMESTAMP as dbt_loaded_at

@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: int_activities_enriched
+    description: >
+      Intermediate model that enriches activity data by joining with weather and gear information.
+      This model serves as a reusable building block for downstream marts.
+    columns:
+      - name: activity_id
+        description: Unique identifier for each activity
+        tests:
+          - unique
+          - not_null
+
+      - name: activity_name
+        description: User-provided name for the activity
+
+      - name: activity_type_key
+        description: Type of activity (e.g., running, cycling, swimming)
+
+      - name: start_date
+        description: Date when the activity started
+        tests:
+          - not_null
+
+      - name: distance_km
+        description: Total distance covered in kilometers
+
+      - name: duration_minutes
+        description: Total duration of the activity in minutes
+
+      - name: avg_speed_kmh
+        description: Average speed in kilometers per hour
+
+      - name: avg_pace_min_per_km
+        description: Average pace in minutes per kilometer (useful for running)
+
+      - name: elevation_gain_m
+        description: Total elevation gained in meters
+
+      - name: avg_heart_rate
+        description: Average heart rate during the activity (bpm)
+
+      - name: total_calories
+        description: Total calories burned during the activity
+
+      # Weather columns
+      - name: temperature_c
+        description: Temperature in Celsius at the time of the activity
+
+      - name: feels_like_c
+        description: Apparent temperature (feels like) in Celsius
+
+      - name: humidity_percent
+        description: Relative humidity percentage
+
+      - name: wind_speed_kmh
+        description: Wind speed in kilometers per hour
+
+      - name: weather_condition
+        description: Weather condition description (e.g., Clear, Cloudy, Rain)
+
+      # Gear columns
+      - name: gear_id
+        description: UUID of the gear used for this activity
+
+      - name: gear_name
+        description: Name of the gear used (e.g., bike model, shoe brand)

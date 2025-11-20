@@ -25,10 +25,10 @@ SELECT
     ROUND(movingDuration / 60, 1) as moving_duration_minutes,
     
     -- Elevation
-    elevationGain as elevation_gain_m,
-    elevationLoss as elevation_loss_m,
-    minElevation as min_elevation_m,
-    maxElevation as max_elevation_m,
+    ROUND(elevationGain, 1) as elevation_gain_m,
+    ROUND(elevationLoss, 1) as elevation_loss_m,
+    ROUND(minElevation, 1) as min_elevation_m,
+    ROUND(maxElevation, 1) as max_elevation_m,
     
     -- Speed (convert from m/s to km/h)
     ROUND(averageSpeed * 3.6, 2) as avg_speed_kmh,
@@ -63,32 +63,32 @@ SELECT
     END as max_pace_formatted,
     
     -- Heart Rate
-    averageHR as avg_heart_rate,
-    maxHR as max_heart_rate,
-    hrTimeInZone_1 as hr_zone_1_seconds,
-    hrTimeInZone_2 as hr_zone_2_seconds,
-    hrTimeInZone_3 as hr_zone_3_seconds,
-    hrTimeInZone_4 as hr_zone_4_seconds,
-    hrTimeInZone_5 as hr_zone_5_seconds,
+    ROUND(averageHR, 0) as avg_heart_rate,
+    ROUND(maxHR, 0) as max_heart_rate,
+    ROUND(hrTimeInZone_1, 0) as hr_zone_1_seconds,
+    ROUND(hrTimeInZone_2, 0) as hr_zone_2_seconds,
+    ROUND(hrTimeInZone_3, 0) as hr_zone_3_seconds,
+    ROUND(hrTimeInZone_4, 0) as hr_zone_4_seconds,
+    ROUND(hrTimeInZone_5, 0) as hr_zone_5_seconds,
     
     -- Running Metrics
-    averageRunningCadenceInStepsPerMinute as avg_cadence_spm,
-    maxRunningCadenceInStepsPerMinute as max_cadence_spm,
-    avgStrideLength as avg_stride_length_m,
-    steps as total_steps,
+    ROUND(averageRunningCadenceInStepsPerMinute, 0) as avg_cadence_spm,
+    ROUND(maxRunningCadenceInStepsPerMinute, 0) as max_cadence_spm,
+    ROUND(avgStrideLength, 2) as avg_stride_length_m,
+    ROUND(steps, 0) as total_steps,
     
     -- Training Effect
-    aerobicTrainingEffect as aerobic_training_effect,
-    anaerobicTrainingEffect as anaerobic_training_effect,
-    vO2MaxValue as vo2_max,
-    
+    ROUND(aerobicTrainingEffect, 1) as aerobic_training_effect,
+    ROUND(anaerobicTrainingEffect, 1) as anaerobic_training_effect,
+    ROUND(vO2MaxValue, 1) as vo2_max,
+
     -- Calories
-    calories as total_calories,
-    bmrCalories as bmr_calories,
-    
+    ROUND(calories, 0) as total_calories,
+    ROUND(bmrCalories, 0) as bmr_calories,
+
     -- Location
-    startLatitude as start_latitude,
-    startLongitude as start_longitude,
+    ROUND(startLatitude, 6) as start_latitude,
+    ROUND(startLongitude, 6) as start_longitude,
     
     -- Owner info
     ownerFullName as owner_name,

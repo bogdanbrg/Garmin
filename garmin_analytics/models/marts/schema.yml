@@ -64,3 +64,59 @@ models:
       
       - name: dbt_loaded_at
         description: Timestamp when dbt processed this record
+
+  - name: activity_summary
+    description: |
+      Activity summary table with weather and gear context.
+      This mart uses the intermediate layer (int_activities_enriched) to provide
+      a clean, business-ready view of activity performance including environmental conditions.
+    columns:
+      - name: activity_id
+        description: Unique identifier for each activity
+        data_tests:
+          - unique
+          - not_null
+
+      - name: activity_name
+        description: User-provided name for the activity
+
+      - name: activity_type_key
+        description: Type of activity (e.g., running, cycling)
+
+      - name: start_date
+        description: Date when the activity started
+        data_tests:
+          - not_null
+
+      - name: distance_km
+        description: Total distance covered in kilometers
+        data_tests:
+          - not_null
+
+      - name: duration_minutes
+        description: Total duration of the activity in minutes
+
+      - name: avg_speed_kmh
+        description: Average speed in kilometers per hour
+
+      - name: total_calories
+        description: Total calories burned during the activity
+
+      - name: distance_category
+        description: Categorized distance range (e.g., '5K-10K', '10K-15K', '20K+')
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Short Run', '1K-5K', '5K-10K', '10K-15K', '15K-20K', '20K+']
+
+      - name: temperature_category
+        description: Temperature condition category (Hot, Moderate, Cool, Cold)
+        data_tests:
+          - accepted_values:
+              values: ['Hot', 'Moderate', 'Cool', 'Cold']
+
+      - name: weather_condition
+        description: Weather condition during the activity
+
+      - name: gear_name
+        description: Name of the gear used for this activity
