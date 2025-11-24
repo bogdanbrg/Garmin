@@ -120,3 +120,79 @@ models:
 
       - name: gear_name
         description: Name of the gear used for this activity
+
+  - name: activity_kpis_monthly
+    description: |
+      Monthly KPI metrics aggregated by activity category for dashboard cards.
+      Pre-aggregated data showing activity counts, duration, distance, and calories
+      grouped by year-month and activity category (Running, Cycling, Swimming, Strength, Multi-Sport, Other).
+    columns:
+      - name: year_month
+        description: Year and month in YYYY-MM format (e.g., '2024-11')
+        data_tests:
+          - not_null
+
+      - name: year
+        description: Year as integer (e.g., 2024)
+        data_tests:
+          - not_null
+
+      - name: month
+        description: Month as integer (1-12)
+        data_tests:
+          - not_null
+
+      - name: activity_category
+        description: Grouped activity category
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Running', 'Cycling', 'Swimming', 'Strength', 'Multi-Sport', 'Other']
+
+      - name: activity_count
+        description: Number of activities in this category for the month
+        data_tests:
+          - not_null
+
+      - name: total_duration_minutes
+        description: Total time spent on activities in minutes (e.g., 416.8)
+        data_tests:
+          - not_null
+
+      - name: total_duration_hours
+        description: Total time spent on activities in hours (decimal format, e.g., 7.7)
+        data_tests:
+          - not_null
+
+      - name: total_duration_hours_whole
+        description: Whole hours component of total duration (e.g., 7 from 7h 45m)
+        data_tests:
+          - not_null
+
+      - name: total_duration_minutes_remainder
+        description: Minutes component of total duration (e.g., 45 from 7h 45m)
+        data_tests:
+          - not_null
+
+      - name: total_duration_formatted
+        description: Human-readable duration format (e.g., '7h 45m')
+        data_tests:
+          - not_null
+
+      - name: avg_duration_minutes
+        description: Average duration per activity in minutes
+
+      - name: total_distance_km
+        description: Total distance covered in kilometers (sum of all activities)
+
+      - name: avg_distance_km
+        description: Average distance per activity in kilometers (excluding zero-distance activities)
+
+      - name: total_calories
+        description: Total calories burned across all activities
+
+      - name: avg_calories
+        description: Average calories burned per activity
+
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
