@@ -196,3 +196,186 @@ models:
 
       - name: dbt_loaded_at
         description: Timestamp when dbt processed this record
+
+  - name: activity_daily_summary
+    description: |
+      Daily activity summary for calendar heatmap visualization.
+      One row per date with simple aggregated metrics for ALL activity types.
+      Includes strength training and all non-distance activities.
+    columns:
+      - name: activity_date
+        description: Date of activities (YYYY-MM-DD format)
+        data_tests:
+          - unique
+          - not_null
+
+      - name: year
+        description: Year as integer (e.g., 2024)
+        data_tests:
+          - not_null
+
+      - name: month
+        description: Month as integer (1-12)
+        data_tests:
+          - not_null
+
+      - name: day
+        description: Day of month as integer (1-31)
+        data_tests:
+          - not_null
+
+      - name: day_of_week
+        description: Day of week (0=Sunday, 1=Monday, ..., 6=Saturday)
+        data_tests:
+          - not_null
+
+      - name: total_duration_minutes
+        description: Total time spent on all activities in minutes (used for heatmap color intensity)
+        data_tests:
+          - not_null
+
+      - name: total_duration_formatted
+        description: Human-readable duration format for tooltips (e.g., '1h 30m')
+        data_tests:
+          - not_null
+
+      - name: total_distance_km
+        description: Total distance covered across all activities in kilometers
+        data_tests:
+          - not_null
+
+      - name: total_calories
+        description: Total calories burned across all activities
+        data_tests:
+          - not_null
+
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
+
+  - name: activity_details
+    description: |
+      Detailed activity view with comprehensive metrics and categorization.
+      This mart provides all activity details for filterable data tables and detailed exploration.
+      Includes the same activity categorization as the KPI dashboard for consistency.
+      One row per activity with all performance, weather, and gear information.
+    columns:
+      - name: activity_id
+        description: Unique identifier for each activity
+        data_tests:
+          - unique
+          - not_null
+
+      - name: activity_name
+        description: User-provided name for the activity
+
+      - name: activity_type_key
+        description: Specific activity type (e.g., running, cycling, trail_running)
+        data_tests:
+          - not_null
+
+      - name: activity_category
+        description: Grouped activity category matching KPI dashboard
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Running', 'Cycling', 'Swimming', 'Strength', 'Multi-Sport', 'Other']
+
+      - name: start_date
+        description: Date and time when the activity started
+        data_tests:
+          - not_null
+
+      - name: year
+        description: Year as integer (e.g., 2024)
+        data_tests:
+          - not_null
+
+      - name: month
+        description: Month as integer (1-12)
+        data_tests:
+          - not_null
+
+      - name: day
+        description: Day of month as integer (1-31)
+        data_tests:
+          - not_null
+
+      - name: year_month
+        description: Year and month in YYYY-MM format (e.g., '2024-11')
+        data_tests:
+          - not_null
+
+      - name: day_of_week
+        description: Day of week name (Monday, Tuesday, etc.)
+        data_tests:
+          - not_null
+
+      - name: distance_km
+        description: Total distance covered in kilometers
+        data_tests:
+          - not_null
+
+      - name: duration_minutes
+        description: Total duration of the activity in minutes
+        data_tests:
+          - not_null
+
+      - name: duration_formatted
+        description: Human-readable duration format (e.g., '1h 30m')
+        data_tests:
+          - not_null
+
+      - name: avg_speed_kmh
+        description: Average speed in kilometers per hour
+
+      - name: avg_pace_formatted
+        description: Average pace formatted as minutes per kilometer
+
+      - name: elevation_gain_m
+        description: Total elevation gain in meters
+
+      - name: total_calories
+        description: Total calories burned during the activity
+
+      - name: avg_heart_rate
+        description: Average heart rate in beats per minute
+
+      - name: max_heart_rate
+        description: Maximum heart rate in beats per minute
+
+      - name: aerobic_training_effect
+        description: Aerobic training effect score
+
+      - name: anaerobic_training_effect
+        description: Anaerobic training effect score
+
+      - name: temperature_c
+        description: Temperature in Celsius during the activity
+
+      - name: feels_like_c
+        description: Feels-like temperature in Celsius
+
+      - name: weather_condition
+        description: Weather condition during the activity
+
+      - name: wind_speed_kmh
+        description: Wind speed in kilometers per hour
+
+      - name: distance_category
+        description: Categorized distance range (includes 'No distance recorded' for strength training and other non-distance activities)
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['No distance recorded', 'Under 1K', '1K-5K', '5K-10K', '10K-15K', '15K-20K', '20K+']
+
+      - name: temperature_category
+        description: Temperature condition category
+        data_tests:
+          - accepted_values:
+              values: ['Hot', 'Moderate', 'Cool', 'Cold']
+
+      - name: gear_name
+        description: Name of the gear used for this activity
+
+      - name: dbt_loaded_at
+        description: Timestamp when dbt processed this record
