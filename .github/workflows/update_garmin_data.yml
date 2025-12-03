@@ -41,6 +41,23 @@ jobs:
       run: |
         pip install dbt-sqlite
 
+    - name: Setup dbt profile
+      run: |
+        mkdir -p ~/.dbt
+        cat > ~/.dbt/profiles.yml << 'EOF'
+        garmin_analytics:
+          outputs:
+            dev:
+              type: sqlite
+              threads: 1
+              database: 'garmin'
+              schema: 'main'
+              schemas_and_paths:
+                main: '/home/runner/work/Garmin/Garmin/data/garmin.db'
+              schema_directory: '/home/runner/work/Garmin/Garmin/data'
+          target: dev
+        EOF
+
     - name: Run dbt models
       run: |
         cd garmin_analytics
