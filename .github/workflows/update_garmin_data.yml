@@ -1,0 +1,57 @@
+name: Update Garmin Data
+
+on:
+  schedule:
+    # Run daily at 6 AM UTC (adjust to your preferred time)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Python dependencies
+      run: |
+        pip install garth pandas python-dotenv requests
+
+    - name: Run extraction scripts
+      env:
+        GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
+        GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+        OPENWEATHERMAP_API_KEY: ${{ secrets.OPENWEATHERMAP_API_KEY }}
+      run: |
+        python extract_activities.py
+        python extract_activity_gear.py
+        python extract_gear.py
+        python extract_activity_weather.py
+
+    - name: Install dbt
+      run: |
+        pip install dbt-sqlite
+
+    - name: Run dbt models
+      run: |
+        cd garmin_analytics
+        dbt run
+        dbt test
+
+    - name: Commit and push updated data
+      run: |
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        git add data/garmin.db
+        git diff --staged --quiet || git commit -m "Update Garmin data - $(date +'%Y-%m-%d') 🤖
+
+        Generated with [Claude Code](https://claude.com/claude-code)
+
+        Co-Authored-By: Claude <noreply@anthropic.com>"
+        git push
