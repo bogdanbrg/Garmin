@@ -9,19 +9,31 @@ import sys
 from getpass import getpass
 
 def init_api():
-    """Initialize Garmin API using stored tokens"""
-    tokenstore = os.path.expanduser("~/.garminconnect")
-    
-    try:
-        print(f"  → Attempting login using stored tokens...")
-        api = Garmin()
-        api.login(tokenstore)
-        print("  ✅ Logged in using stored tokens")
+    """Initialize Garmin API using environment variables or stored tokens"""
+    email = os.getenv('GARMIN_EMAIL')
+    password = os.getenv('GARMIN_PASSWORD')
+
+    api = Garmin()
+
+    if email and password:
+        # Use email/password authentication (for GitHub Actions)
+        print("  → Logging in with environment credentials...")
+        api.login(email, password)
+        print("  ✅ Logged in using environment credentials")
         return api
-    except Exception as e:
-        print(f"  ⚠️  Token login failed: {e}")
-        print("  → Requesting fresh login credentials...")
-        return fresh_login(tokenstore)
+    else:
+        # Use stored tokens (for local development)
+        tokenstore = os.path.expanduser("~/.garminconnect")
+
+        try:
+            print(f"  → Attempting login using stored tokens...")
+            api.login(tokenstore)
+            print("  ✅ Logged in using stored tokens")
+            return api
+        except Exception as e:
+            print(f"  ⚠️  Token login failed: {e}")
+            print("  → Requesting fresh login credentials...")
+            return fresh_login(tokenstore)
 
 def fresh_login(tokenstore):
     """Perform fresh login with credentials"""

@@ -8,10 +8,20 @@ import json
 import time
 
 def init_api():
-    """Initialize Garmin API using stored tokens"""
-    tokenstore = os.path.expanduser("~/.garminconnect")
+    """Initialize Garmin API using environment variables or stored tokens"""
+    email = os.getenv('GARMIN_EMAIL')
+    password = os.getenv('GARMIN_PASSWORD')
+
     api = Garmin()
-    api.login(tokenstore)
+
+    if email and password:
+        # Use email/password authentication (for GitHub Actions)
+        api.login(email, password)
+    else:
+        # Use stored tokens (for local development)
+        tokenstore = os.path.expanduser("~/.garminconnect")
+        api.login(tokenstore)
+
     return api
 
 def extract_and_load_activity_weather():
