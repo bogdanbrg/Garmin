@@ -21,7 +21,7 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        pip install garth pandas python-dotenv requests
+        pip install garth pandas python-dotenv requests python-garminconnect
 
     - name: Run extraction scripts
       env:
