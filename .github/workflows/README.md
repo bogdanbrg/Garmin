@@ -15,13 +15,12 @@ You need to add your API credentials as GitHub Secrets:
 1. Go to your repository on GitHub
 2. Click **Settings** > **Secrets and variables** > **Actions**
 3. Click **New repository secret**
-4. Add these three secrets:
+4. Add these two secrets:
 
    | Secret Name | Value |
    |------------|-------|
    | `GARMIN_EMAIL` | Your Garmin Connect email |
    | `GARMIN_PASSWORD` | Your Garmin Connect password |
-   | `OPENWEATHERMAP_API_KEY` | Your OpenWeatherMap API key |
 
 ### 2. Commit and Push the Workflow
 
