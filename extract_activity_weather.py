@@ -12,14 +12,14 @@ def init_api():
     email = os.getenv('GARMIN_EMAIL')
     password = os.getenv('GARMIN_PASSWORD')
 
-    api = Garmin()
-
     if email and password:
         # Use email/password authentication (for GitHub Actions)
-        api.login(email, password)
+        api = Garmin(email=email, password=password)
+        api.login()
     else:
         # Use stored tokens (for local development)
         tokenstore = os.path.expanduser("~/.garminconnect")
+        api = Garmin()
         api.login(tokenstore)
 
     return api

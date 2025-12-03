@@ -13,12 +13,11 @@ def init_api():
     email = os.getenv('GARMIN_EMAIL')
     password = os.getenv('GARMIN_PASSWORD')
 
-    api = Garmin()
-
     if email and password:
         # Use email/password authentication (for GitHub Actions)
         print("  → Logging in with environment credentials...")
-        api.login(email, password)
+        api = Garmin(email=email, password=password)
+        api.login()
         print("  ✅ Logged in using environment credentials")
         return api
     else:
@@ -27,6 +26,7 @@ def init_api():
 
         try:
             print(f"  → Attempting login using stored tokens...")
+            api = Garmin()
             api.login(tokenstore)
             print("  ✅ Logged in using stored tokens")
             return api
