@@ -48,6 +48,7 @@ Thumbs.db
 # Scratch/exploratory work
 scratch/
 notebooks/
+backup_chatbot/
 
 # Images (optional - uncomment if you don't want images in Git)
 # *.png
